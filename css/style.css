@@ -1,6 +1,6 @@
 /* Body */
 body{
-    width: 100%;
+    /* width: 100%; */
     font-family: 'Poppins', sans-serif;
 }
 /* Influencer Header*/
@@ -14,7 +14,7 @@ body{
 /*------
 container 
 ----------*/
-.container{
+.influencer-journey{
     display: flex;
 }
 .influencer{
@@ -113,7 +113,6 @@ div .popular-banner{
      margin-left: 1445px;
 }
 .influencer-img{
-    display: block;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
@@ -159,3 +158,25 @@ footer{
 .fa-instagram{
     margin: 0% 16px;
 }
+/*--------
+ Media Queries
+ ------- */
+ /* Mobile Devices */
+@media only screen and (max-width: 688px) {
+    .container, .collection, .article {
+        width: 90%;
+    }
+    .influencer-journey, .popularity, .article {
+      grid-template-columns: repeat(1, 1fr);
+      flex-direction: column;
+    }
+  }
+  /* Tablet Deviecs */
+  @media only screen and (min-width: 688px) {
+      .container, .collection{
+          width: 90%;
+      }
+      .influencer-journey, .popularity{
+          grid-template-columns: repeat(2, 1fr);
+      }
+  }
